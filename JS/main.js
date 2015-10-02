@@ -71,11 +71,32 @@ var currency = items.filter(function (code) {
 
 console.log(currency);
 
-// Third
+// Display on page using innerHTML to change HTML content
 document.getElementById('answer-three').innerHTML = currency[0].title + ' costs &#163;' + currency[0].price;
 //-----------------------------Answer 4-------------------------------------//
 
+// Filter out all items made out of wood
+
+var wood = items.filter(function (knock) {
+  return knock.materials.indexOf('wood') != -1;
+});
+
+console.log(wood);
+
+// Display on page using innerHTML to change HTML content
+document.getElementById('answer-four').innerHTML = 
+  wood[0].title + ' is made of wood.' + '<br />' +
+  wood[1].title + ' is made of wood.' + '<br />' +
+  wood[2].title + ' is made of wood.' + '<br />' +
+  wood[3].title + ' is made of wood.' + '<br />' +
+  wood[4].title + ' is made of wood.';
+
+
 //-----------------------------Answer 5-------------------------------------//
+
+// First
+
+// Second
 
 //-----------------------------Answer 6-------------------------------------//
 
