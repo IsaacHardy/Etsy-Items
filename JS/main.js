@@ -66,7 +66,7 @@ document.getElementById('answer-two').innerHTML = titleArry[0] + "<br />" + titl
 
 // Filter items to get the object with a code of GBP and specfic ID
 var currency = items.filter(function (code) {
-  return code.currency_code = 'GBP' && code.listing_id === 189187176;
+  return code.currency_code === 'GBP';
 });
 
 console.log(currency);
@@ -133,7 +133,14 @@ document.getElementById('answer-five').innerHTML =
 
 //-----------------------------Answer 6-------------------------------------//
 
+// Filter all objects that have 'i_did' as their 'who_made'
+var who = items.filter(function (what) {
+  return what.who_made === 'i_did';
+});
 
+console.log(who);
+// Display on page using innerHTML to change HTML content
+document.getElementById('answer-six').innerHTML = who.length + ' were made by their sellers';
 
 
 
