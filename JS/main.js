@@ -73,7 +73,10 @@ console.log(currency);
 
 // Display on page using innerHTML to change HTML content
 document.getElementById('answer-three').innerHTML = currency[0].title + ' costs &#163;' + currency[0].price;
+
+
 //-----------------------------Answer 4-------------------------------------//
+
 
 // Filter out all items made out of wood
 
@@ -94,9 +97,39 @@ document.getElementById('answer-four').innerHTML =
 
 //-----------------------------Answer 5-------------------------------------//
 
-// First
+// Filter out all objects with the array material with 8 items or more.
+var eight = items.filter(function (mats) {
+  return  mats.materials.length >= 8;
+});
 
-// Second
+console.log(eight);
+
+// Display on page using innerHTML to change HTML content
+document.getElementById('answer-five').innerHTML = 
+  eight[0].title + ' has ' + eight[0].materials.length + ' materials: ' + '<br />' + 
+    eight[0].materials[0] + '<br />' + 
+    eight[0].materials[1] + '<br />' + 
+    eight[0].materials[2] + '<br />' + 
+    eight[0].materials[3] + '<br />' +
+    eight[0].materials[4] + '<br />' +
+    eight[0].materials[5] + '<br />' +
+    eight[0].materials[6] + '<br />' +
+    eight[0].materials[7] + '<br />' +
+    eight[0].materials[8] + '<br />' + '<br />' +
+  eight[1].title + ' has ' + eight[1].materials.length + ' materials: ' + '<br />' + '<br />' + 
+    eight[1].materials[0] + '<br />' + 
+    eight[1].materials[1] + '<br />' + 
+    eight[1].materials[2] + '<br />' + 
+    eight[1].materials[3] + '<br />' +
+    eight[1].materials[4] + '<br />' +
+    eight[1].materials[5] + '<br />' +
+    eight[1].materials[6] + '<br />' +
+    eight[1].materials[7] + '<br />' +
+    eight[1].materials[8] + '<br />' +
+    eight[1].materials[9] + '<br />' +
+    eight[1].materials[10] + '<br />' +
+    eight[1].materials[11] + '<br />' +
+    eight[1].materials[12] + '<br />';
 
 //-----------------------------Answer 6-------------------------------------//
 
