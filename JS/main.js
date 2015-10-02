@@ -34,8 +34,45 @@ var textNode = document.createTextNode(str);
 answerOne.appendChild(textNode);
 //-----------------------------Answer 2-------------------------------------//
 
+
+
+
+// Filter array to grab correctly priced objects
+var filt = items.filter(function (num) {
+  return num.price > 14 && num.price < 18;
+});
+
+console.log(filt);
+
+// Create var array 
+var titleArry = [];
+
+// Push each title attribute from array filt into new titleArry
+filt.forEach(function (item2) {
+  titleArry.push(item2.title);
+  console.log(filt);
+});
+
+
+// Display on page
+
+  // Change HTML content with innerHTML
+document.getElementById('answer-two').innerHTML = titleArry[0] + "<br />" + titleArry[1] + "<br />" + titleArry[2];
+
+
+
 //-----------------------------Answer 3-------------------------------------//
 
+
+// Filter items to get the object with a code of GBP and specfic ID
+var currency = items.filter(function (code) {
+  return code.currency_code = 'GBP' && code.listing_id === 189187176;
+});
+
+console.log(currency);
+
+// Third
+document.getElementById('answer-three').innerHTML = currency[0].title + ' costs &#163;' + currency[0].price;
 //-----------------------------Answer 4-------------------------------------//
 
 //-----------------------------Answer 5-------------------------------------//
