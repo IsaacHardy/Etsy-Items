@@ -131,6 +131,29 @@ document.getElementById('answer-five').innerHTML =
     eight[1].materials[11] + '<br />' +
     eight[1].materials[12] + '<br />';
 
+// More effiecint way to Display .filtered items
+
+// var answer5 = document.querySelector('#answer-five');
+// ​
+// eight.forEach( function (item) {
+// ​
+//   var para = document.createElement('p');
+//   para.classList.add('title');
+//   para.textContent = item.title + 'has ' + item.materials.length + ' materials';
+  
+//   answer5.appendChild(para);
+// ​
+//   item.materials.forEach( function (itemMaterial) {
+//     var para = document.createElement('p');
+//     para.classList.add('material');
+//     para.textContent = itemMaterial;
+//     answer5.appendChild(para);
+// ​
+//   });
+// ​
+// });
+
+
 //-----------------------------Answer 6-------------------------------------//
 
 // Filter all objects that have 'i_did' as their 'who_made'
